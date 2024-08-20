@@ -1,7 +1,7 @@
 <?php
 
 
-// mybloger theme support
+// myblogger theme support
 function myblogger_theme_support()
 {
 
@@ -25,6 +25,14 @@ function myblogger_theme_support()
     /** refresh widgest **/
     add_theme_support('customize-selective-refresh-widgets');
 
+    register_nav_menus(
+    array(
+      'new-menu' => __( 'New Menu' ),
+      'another-menu' => __( 'Another Menu' ),
+      'an-extra-menu' => __( 'An Extra Menu' )
+    )
+  );
+
 
 }
 
@@ -34,5 +42,22 @@ function myblogger_header() {
     get_template_part( 'template-parts/header/header-1' );
 }
 
+function myblogger_logo()  {
+    $myblogger_logo = get_theme_mod( 'myblogger_logo', get_template_directory_uri() .  '/assets/img/logo/logo-black.svg' );
+?>
+
+
+    <a href="<?php echo esc_url(home_url('/'));  ?> ">
+        <img src="<?php echo esc_url( $myblogger_logo ); ?>" alt=" <?php  echo bloginfo( ) ?> ">
+    </a>
+
+    <?php
+
+}
+
+
 
 include_once('inc/common/scripts.php');
+include_once('inc/myblogger-kirki.php');
+include_once('inc/theme-functions.php');
+include_once('inc/nav-walker.php');
