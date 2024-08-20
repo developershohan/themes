@@ -59,3 +59,5 @@
       <!-- back to top end -->
 
 <?php myblogger_header() ?>
+<?php get_template_part( 'template-parts/header/header-search' ) ?>
+<?php get_template_part( 'template-parts/header/side-panel' ) ?>

@@ -6,6 +6,7 @@
 $myblogger_header_email = get_theme_mod('myblogger_email', 'info@example.com');
 $myblogger_header_phone = get_theme_mod('myblogger_phone', '+964 742 44 763');
 $myblogger_header_time = get_theme_mod('myblogger_time', 'Sunday-Thures 10am-07pm');
+$myblogger_header_logo = get_theme_mod('myblogger_logo', get_template_directory_uri() .  '/assets/img/logo/logo-black.svg');
 
 ?>
 <header>
@@ -205,109 +206,4 @@ $myblogger_header_time = get_theme_mod('myblogger_time', 'Sunday-Thures 10am-07p
 </header>
 <!-- header area end -->
 
-<!-- offcanvas area start -->
-<div class="offcanvas__area offcanvas__area-1">
-   <div class="offcanvas__wrapper">
-      <div class="offcanvas__shape">
-         <img class="offcanvas__shape-1" src="assets/img/shape/offcanvas-shape-1.png" alt="">
-      </div>
-      <div class="offcanvas__close">
-         <button class="offcanvas__close-btn offcanvas-close-btn">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-               <path d="M1 1L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-            </svg>
-         </button>
-      </div>
-      <div class="offcanvas__content">
-         <div class="offcanvas__top mb-70 d-flex justify-content-between align-items-center">
-            <div class="offcanvas__logo logo">
-               <a href="index.html">
-                  <img src="assets/img/logo/logo-black.svg" alt="logo">
-               </a>
-            </div>
-         </div>
-         <div class="mobile-menu fix d-lg-none"></div>
-         <div class="offcanvas__menu offcanvas__menu-ff-space d-none d-lg-block">
-            <nav>
-               <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="services.html">Service</a></li>
-                  <li><a href="blog-grid-2.html">Blog</a></li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-               </ul>
-            </nav>
-         </div>
-         <div class="offcanvas__btn">
-            <a href="contact.html" class="tp-btn-offcanvas">Getting Started <i
-                  class="fa-regular fa-chevron-right"></i></a>
-         </div>
-         <div class="offcanvas__social">
-            <h3 class="offcanvas__social-title">Follow :</h3>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-         </div>
-         <div class="offcanvas__contact">
-            <p class="offcanvas__contact-call"><a href="tel:+964-742-44-763">+964 742 44 763</a></p>
-            <p class="offcanvas__contact-mail"><a href="mailto:info@harry.com">info@harry.com</a></p>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="body-overlay"></div>
-<!-- offcanvas area end -->
 
-<!-- search popup start -->
-<div class="search__popup">
-   <div class="container">
-      <div class="row">
-         <div class="col-xxl-12">
-            <div class="search__wrapper">
-               <div class="search__top d-flex justify-content-between align-items-center">
-                  <div class="search__logo">
-                     <a href="index.html">
-                        <img src="assets/img/logo/logo.svg" alt="">
-                     </a>
-                  </div>
-                  <div class="search__close">
-                     <button type="button" class="search__close-btn search-close-btn">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                           <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                        </svg>
-                     </button>
-                  </div>
-               </div>
-               <div class="search__form">
-                  <form action="#">
-                     <div class="search__input">
-                        <input class="search-input-field" type="text" placeholder="Type here to search...">
-                        <span class="search-focus-border"></span>
-                        <button type="submit">
-                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                 d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                 stroke-linejoin="round" />
-                              <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5"
-                                 stroke-linecap="round" stroke-linejoin="round" />
-                           </svg>
-                        </button>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<!-- search popup end -->

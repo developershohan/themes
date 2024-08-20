@@ -26,29 +26,60 @@ function myblogger_theme_support()
     add_theme_support('customize-selective-refresh-widgets');
 
     register_nav_menus(
-    array(
-      'new-menu' => __( 'New Menu' ),
-      'another-menu' => __( 'Another Menu' ),
-      'an-extra-menu' => __( 'An Extra Menu' )
-    )
-  );
+        array(
+            'main-menu' => __('Main Menu'),
+            'side-panel-menu' => __('Side Panel Menu')
+        )
+    );
 
 
 }
 
 add_action('after_setup_theme', 'myblogger_theme_support');
 
-function myblogger_header() {
-    get_template_part( 'template-parts/header/header-1' );
+function myblogger_header()
+{
+    get_template_part('template-parts/header/header-1');
 }
 
-function myblogger_logo()  {
-    $myblogger_logo = get_theme_mod( 'myblogger_logo', get_template_directory_uri() .  '/assets/img/logo/logo-black.svg' );
-?>
+function myblogger_logo()
+{
+    $myblogger_logo = get_theme_mod('myblogger_logo', get_template_directory_uri() . '/assets/img/logo/logo-black.svg');
+    ?>
 
 
-    <a href="<?php echo esc_url(home_url('/'));  ?> ">
-        <img src="<?php echo esc_url( $myblogger_logo ); ?>" alt=" <?php  echo bloginfo( ) ?> ">
+    <a href="<?php echo esc_url(home_url('/')); ?> ">
+        <img src="<?php echo esc_url($myblogger_logo); ?>" alt=" <?php echo bloginfo() ?> ">
+    </a>
+
+    <?php
+
+}
+
+// myblogger_search_logo
+function myblogger_search_logo()
+{
+    $myblogger_search_logo = get_theme_mod('myblogger_search_logo', get_template_directory_uri() . '/assets/img/logo/logo.svg');
+    ?>
+
+
+    <a href="<?php echo esc_url(home_url('/')); ?> ">
+        <img src="<?php echo esc_url($myblogger_search_logo); ?>" alt=" <?php echo bloginfo() ?> ">
+    </a>
+
+    <?php
+
+}
+
+// myblogger_search_logo
+function myblogger_side_panel_logo()
+{
+    $myblogger_side_panel_logo = get_theme_mod('myblogger_side_panel_logo', get_template_directory_uri() . '/assets/img/logo/logo-black.svg');
+    ?>
+
+
+    <a href="<?php echo esc_url(home_url('/')); ?> ">
+        <img src="<?php echo esc_url($myblogger_side_panel_logo); ?>" alt=" <?php echo bloginfo() ?> ">
     </a>
 
     <?php
@@ -58,6 +89,9 @@ function myblogger_logo()  {
 
 
 include_once('inc/common/scripts.php');
-include_once('inc/myblogger-kirki.php');
-include_once('inc/theme-functions.php');
+if (class_exists('Kirki')) {
+
+    include_once('inc/myblogger-kirki.php');
+}
+include_once('inc/template-function.php');
 include_once('inc/nav-walker.php');

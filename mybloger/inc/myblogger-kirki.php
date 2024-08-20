@@ -55,6 +55,7 @@ function myblogger_header_info() {
 }
 
 myblogger_header_info();
+
 // header logo
 function myblogger_header_logo() {
     new \Kirki\Section(
@@ -76,7 +77,15 @@ function myblogger_header_logo() {
             'priority' => 10,
         ]
     );
-
+    new \Kirki\Field\Image(
+        [
+            'settings' => 'myblogger_search_logo',
+            'label'    => esc_html__( 'Search Logo', 'myblogger' ),
+            'section'  => 'myblogger_header_logo',
+            'default'  => get_template_directory_uri() . '/assets/img/logo/logo.svg' ,
+            'priority' => 10,
+        ]
+    );
     
     
     
@@ -85,12 +94,35 @@ function myblogger_header_logo() {
 }
 
 
-myblogger_header_logo()
+myblogger_header_logo();
+// header logo
+
+function myblogger_side_panel() {
+    new \Kirki\Section(
+        'myblogger_side_panel',
+        [
+            'title'       => esc_html__( 'Side Panel', 'myblogger' ),
+            'description' => esc_html__( 'My Section Description.', 'myblogger' ),
+            'panel'       => 'myblogger_panel',
+            'priority'    => 160,
+        ]
+    );
+    
+
+    new \Kirki\Field\Image(
+        [
+            'settings' => 'myblogger_side_panel_logo',
+            'label'    => esc_html__( 'side panel  Logo', 'myblogger' ),
+            'section'  => 'myblogger_side_panel',
+            'default'  => get_template_directory_uri() . '/assets/img/logo/logo-black.svg' ,
+            'priority' => 10,
+        ]
+    );
+    
+}
 
 
-
-
-
+myblogger_side_panel()
 
 
 ?>
