@@ -1,3 +1,6 @@
+<?php $myblogger_side_logo_switch = get_theme_mod('myblogger_side_logo_switch', 'true') ?>
+<?php $myblogger_side_social_switch = get_theme_mod('myblogger_side_social_switch', 'true') ?>
+
 <!-- offcanvas area start -->
 <div class="offcanvas__area offcanvas__area-1">
     <div class="offcanvas__wrapper">
@@ -15,10 +18,13 @@
             </button>
         </div>
         <div class="offcanvas__content">
-            <div class="offcanvas__top mb-70 d-flex justify-content-between align-items-center">
-                <div class="offcanvas__logo logo">
-                    <?php myblogger_side_panel_logo() ?>
-                </div>
+            <?php if (!empty($myblogger_side_logo_switch)): ?>
+                <div class="offcanvas__top mb-70 d-flex justify-content-between align-items-center">
+                    <div class="offcanvas__logo logo">
+                        <?php myblogger_side_panel_logo() ?>
+                    </div>
+
+                <?php endif ?>
             </div>
             <div class="mobile-menu fix d-lg-none"></div>
             <div class="offcanvas__menu offcanvas__menu-ff-space d-none d-lg-block">
@@ -38,13 +44,12 @@
                 <a href="contact.html" class="tp-btn-offcanvas">Getting Started <i
                         class="fa-regular fa-chevron-right"></i></a>
             </div>
+            <?php if (!empty($myblogger_side_social_switch)): ?>
             <div class="offcanvas__social">
                 <h3 class="offcanvas__social-title">Follow :</h3>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <?php myblogger_social_media() ?>
             </div>
+            <?php endif ?>
             <div class="offcanvas__contact">
                 <p class="offcanvas__contact-call"><a href="tel:+964-742-44-763">+964 742 44 763</a></p>
                 <p class="offcanvas__contact-mail"><a href="mailto:info@harry.com">info@harry.com</a></p>

@@ -37,10 +37,7 @@ function myblogger_theme_support()
 
 add_action('after_setup_theme', 'myblogger_theme_support');
 
-function myblogger_header()
-{
-    get_template_part('template-parts/header/header-1');
-}
+
 
 function myblogger_logo()
 {
